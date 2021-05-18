@@ -3,7 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.1'
 gem "dotenv", "~> 2.7"
-
+gem 'bootstrap-navbar', '~> 3.1', '>= 3.1.2'
+gem 'rails_bootstrap_navbar'
 gem 'dotenv-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
