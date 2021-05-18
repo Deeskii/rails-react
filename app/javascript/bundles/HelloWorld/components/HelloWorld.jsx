@@ -1,19 +1,29 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const HelloWorld = (props) => {
   const [name, setName] = useState(props.name);
-
+  
+  function getFact() {
+  fetch('https://api.chucknorris.io/jokes/random')
+  .then(response => response.json())
+  .then(data => console.log(data));
+	}
+  
   return (
     <div>
-      <h3>Hello, {name}!</h3>
+      <h3>Hello, {name} 👀 this!</h3>
       <hr />
-      <form>
-        <label htmlFor="name">
-          Say hello to:
-          <input id="name" type="text" value={name} onChange={(e) => setName(e.target.value)} />
-        </label>
-      </form>
+        <div className="container text-center">
+        <h1>Chuck Norris Facts</h1>
+        <button type="button" 
+          className="btn btn-primary"
+          onClick={getFact()}>
+          More Chuck Facts!
+        </button>
+      </div>
+	 <hr />
     </div>
   );
 };

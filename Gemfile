@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.1'
 gem "dotenv", "~> 2.7"
+gem 'jquery-rails'
 gem 'bootstrap-navbar', '~> 3.1', '>= 3.1.2'
 gem 'rails_bootstrap_navbar'
 gem 'dotenv-rails'

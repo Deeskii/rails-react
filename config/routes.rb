@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'hw', to: 'hello_world#index'
+  get 'peeps', to: 'hello_world#index'
   resources :posts
   root 'home#index'
   
